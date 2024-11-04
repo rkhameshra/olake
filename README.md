@@ -1,43 +1,55 @@
-# Gear5
+# colake
 
-Gear5 is a new data integration protocol and specification, written in Golang, that aims to provide an alternative to existing solutions such as Airbyte, Meltano, and Singer-io. It focuses on simplicity, performance, and extensibility to enable seamless data integration between various systems and applications.
+Connector ecosystem for Olake, the key points Olake Connectors focuses on are these
+- **Integrated Writers to avoid block of reading, and pushing directly into destinations**
+- **Connector Autonomy**
+- **Avoid operations that don't contribute to increasing record throughput**
 
-## Roadmap
+## Colake Structure
+![diagram](/.github/assets/Colake.jpg)
+
+## Components
+### Drivers
+
+Drivers aka Connectors/Source that includes the logic for interacting with database. Upcoming drivers being planned are
+- [x] MongoDB
+- [ ] Kafka
 - [ ] Postgres
-  - [ ] Incremental Support
-  - [ ] CDC Support
+- [ ] DynamoDB
 
+### Writers
 
+Writers are directly integrated into drivers to avoid blockage of writing/reading into/from os.StdOut or any other type of I/O. This enables direct insertion of records from each individual fired query to the destination.
 
-## Getting Started
+Writers are being planned in this order
+- [ ] Local Parquet
+- [ ] S3 Simple Parquet
+- [ ] S3 Iceberg Parquet
+- [ ] Snowflake
+- [ ] BigQuery
+- [ ] RedShift
 
-To start using Gear5, follow these steps:
+### Core
 
-1. **Run Gear5**: Run Gear5 driver/adapter images directly with config, catalog, and state files.
-2. **Explore the Documentation**: Refer to the documentation for detailed information on how to use Protocol Gear5, including connector setup, data source configuration, and integration examples.
+Core or framework is the component/logic that has been abstracted out from Connectors to follow DRY. This includes base CLI commands, State logic, Validation logic, Type detection for unstructured data, handling Config, State, Catalog, and Writer config file, logging etc.
 
-## Contributing
+Core includes http server that directly exposes live stats about running sync such as
+- Possible finish time
+- Concurrently running processes
+- Live record count
 
-We welcome contributions to Protocol Gear5! If you'd like to contribute, please follow these guidelines:
+Core handles the commands to interact with a driver via these
+- spec command: Returns render-able JSON Schema that can be consumed by rjsf libraries in frontend
+- check command: performs all necessary checks on the Config, Catalog, State and Writer config
+- discover command: Returns all streams and their schema
+- sync command: Extracts data out of Source and writes into destinations
 
-1. Fork the repository and create a new branch for your feature or bug fix.
+### SDKs
 
-2. Commit your changes with descriptive commit messages.
+SDKs are libraries/packages that can orchestrate the connector in two environments i.e. Docker and Kubernetes. These SDKs can be directly consumed by users similar to PyAirbyte, DLT-hub.
 
-3. Push your changes to your forked repository.
+(Unconfirmed) SDKs can interact with Connectors via potential GRPC server to override certain default behavior of the system by adding custom functions to enable features like Transformation, Custom Table Name via writer, or adding hooks.
 
-4. Submit a pull request to the main Gear5 repository, clearly describing the changes you've made and their purpose.
+### Olake
 
-5. Participate in the code review process, addressing any feedback or suggestions.
-
-## License
-
-Protocol Gear5 is open-source and released under a custom Licence. Please check
-
-## Contact
-
-For any questions, feedback, or support related to Gear5, you can reach out to the development team via email at [piyushsingariya@gmail.com](mailto:piyushsingariya@gmail.com).
-
-## Acknowledgments
-
-We would like to acknowledge the contributions of all individuals and organizations that have helped make Gear5 possible. Their feedback, ideas, and suggestions have been invaluable in shaping and improving the protocol.
+Olake will be built on top of SDK providing persistent storage and a user interface that enables orchestration directly from your machine with default writer mode as `S3 Iceberg Parquet`
