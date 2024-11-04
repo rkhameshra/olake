@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/utils"
 )
 
 // Message is a dto for gear5 output row representation

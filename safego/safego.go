@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gear5sh/gear5/logger"
+	"github.com/datazip-inc/olake/logger"
 )
 
 const defaultRestartTimeout = 2 * time.Second

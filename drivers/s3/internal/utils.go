@@ -7,8 +7,8 @@ import (
 	awscredentials "github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sts"
-	"github.com/gear5sh/gear5/logger"
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/logger"
+	"github.com/datazip-inc/olake/utils"
 )
 
 func newSession(credentials interface{}) (*session.Session, error) {

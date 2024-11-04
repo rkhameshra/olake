@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gear5sh/gear5/drivers/base"
-	"github.com/gear5sh/gear5/logger"
-	"github.com/gear5sh/gear5/protocol"
-	"github.com/gear5sh/gear5/types"
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/drivers/base"
+	"github.com/datazip-inc/olake/logger"
+	"github.com/datazip-inc/olake/protocol"
+	"github.com/datazip-inc/olake/types"
+	"github.com/datazip-inc/olake/utils"
 	"gopkg.in/Iwark/spreadsheet.v2"
 )
 

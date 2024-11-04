@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/utils"
 	"github.com/lib/pq"
 )
 

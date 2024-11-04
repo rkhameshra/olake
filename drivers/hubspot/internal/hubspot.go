@@ -5,14 +5,14 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/gear5sh/gear5/drivers/base"
+	"github.com/datazip-inc/olake/drivers/base"
 	"github.com/goccy/go-json"
 
-	"github.com/gear5sh/gear5/jsonschema"
-	"github.com/gear5sh/gear5/jsonschema/schema"
-	"github.com/gear5sh/gear5/protocol"
-	"github.com/gear5sh/gear5/types"
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/jsonschema"
+	"github.com/datazip-inc/olake/jsonschema/schema"
+	"github.com/datazip-inc/olake/protocol"
+	"github.com/datazip-inc/olake/types"
+	"github.com/datazip-inc/olake/utils"
 )
 
 type Hubspot struct {

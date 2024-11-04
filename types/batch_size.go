@@ -3,7 +3,7 @@ package types
 import (
 	"sync/atomic"
 
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/utils"
 )
 
 type BatchSizeEstimator struct {

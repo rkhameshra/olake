@@ -1,9 +1,9 @@
 package base
 
 import (
-	"github.com/gear5sh/gear5/protocol"
-	"github.com/gear5sh/gear5/types"
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/protocol"
+	"github.com/datazip-inc/olake/types"
+	"github.com/datazip-inc/olake/utils"
 )
 
 // Pass dest with all fields initialized to handle nil state case

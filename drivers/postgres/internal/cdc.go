@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gear5sh/gear5/drivers/base"
-	"github.com/gear5sh/gear5/pkg/jdbc"
-	"github.com/gear5sh/gear5/pkg/waljs"
-	"github.com/gear5sh/gear5/protocol"
-	"github.com/gear5sh/gear5/safego"
-	"github.com/gear5sh/gear5/types"
+	"github.com/datazip-inc/olake/drivers/base"
+	"github.com/datazip-inc/olake/pkg/jdbc"
+	"github.com/datazip-inc/olake/pkg/waljs"
+	"github.com/datazip-inc/olake/protocol"
+	"github.com/datazip-inc/olake/safego"
+	"github.com/datazip-inc/olake/types"
 	"github.com/jmoiron/sqlx"
 )
 

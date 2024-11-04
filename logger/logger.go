@@ -8,8 +8,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/gear5sh/gear5/logger/console"
-	"github.com/gear5sh/gear5/types"
+	"github.com/datazip-inc/olake/logger/console"
+	"github.com/datazip-inc/olake/types"
 )
 
 // Info writes record into os.stdout with log level INFO

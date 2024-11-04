@@ -3,8 +3,8 @@ package base
 import (
 	"time"
 
-	"github.com/gear5sh/gear5/logger"
-	"github.com/gear5sh/gear5/types"
+	"github.com/datazip-inc/olake/logger"
+	"github.com/datazip-inc/olake/types"
 )
 
 type basestream interface {

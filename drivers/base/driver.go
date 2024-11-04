@@ -1,9 +1,9 @@
 package base
 
 import (
-	"github.com/gear5sh/gear5/protocol"
-	"github.com/gear5sh/gear5/types"
-	"github.com/gear5sh/gear5/typeutils"
+	"github.com/datazip-inc/olake/protocol"
+	"github.com/datazip-inc/olake/types"
+	"github.com/datazip-inc/olake/typeutils"
 )
 
 type Driver struct {

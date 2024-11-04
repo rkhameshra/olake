@@ -4,7 +4,7 @@ func ToPtr[T any](val T) *T {
 	return &val
 }
 
-const NullStruct = "github.com/gear5sh/gear5/types/Null"
+const NullStruct = "github.com/datazip-inc/olake/types/Null"
 
 type Null struct {
 }

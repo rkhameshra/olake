@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gear5sh/gear5/protocol"
-	"github.com/gear5sh/gear5/types"
+	"github.com/datazip-inc/olake/protocol"
+	"github.com/datazip-inc/olake/types"
 )
 
 const CDCDeletedAt = "_cdc_deleted_at"

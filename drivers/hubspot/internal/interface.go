@@ -1,7 +1,7 @@
 package driver
 
 import (
-	"github.com/gear5sh/gear5/types"
+	"github.com/datazip-inc/olake/types"
 )
 
 type HubspotStream interface {

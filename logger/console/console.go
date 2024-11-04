@@ -7,7 +7,7 @@ import (
 
 	"github.com/goccy/go-json"
 
-	"github.com/gear5sh/gear5/types"
+	"github.com/datazip-inc/olake/types"
 )
 
 var (

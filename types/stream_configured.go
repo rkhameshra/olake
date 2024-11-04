@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/utils"
 )
 
 // Input/Processed object for Stream

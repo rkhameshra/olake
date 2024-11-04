@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/gear5sh/gear5"
-	driver "github.com/gear5sh/gear5/drivers/google-sheets/internal"
+	"github.com/datazip-inc/olake"
+	driver "github.com/datazip-inc/olake/drivers/google-sheets/internal"
 )
 
 func main() {

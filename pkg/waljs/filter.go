@@ -6,8 +6,8 @@ import (
 
 	"github.com/goccy/go-json"
 
-	"github.com/gear5sh/gear5/protocol"
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/protocol"
+	"github.com/datazip-inc/olake/utils"
 	"github.com/jackc/pglogrepl"
 )
 

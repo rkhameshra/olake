@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gear5sh/gear5/logger"
-	protocol "github.com/gear5sh/gear5/protocol"
-	"github.com/gear5sh/gear5/safego"
+	"github.com/datazip-inc/olake/logger"
+	protocol "github.com/datazip-inc/olake/protocol"
+	"github.com/datazip-inc/olake/safego"
 	"github.com/spf13/cobra"
 )
 

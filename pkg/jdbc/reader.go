@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gear5sh/gear5/safego"
-	"github.com/gear5sh/gear5/types"
+	"github.com/datazip-inc/olake/safego"
+	"github.com/datazip-inc/olake/types"
 )
 
 type Reader[T types.Iterable] struct {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gear5sh/gear5/logger"
+	"github.com/datazip-inc/olake/logger"
 )
 
 type Config struct {

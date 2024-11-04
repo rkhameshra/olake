@@ -3,8 +3,8 @@ package driver
 import (
 	"fmt"
 
-	"github.com/gear5sh/gear5/logger"
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/logger"
+	"github.com/datazip-inc/olake/utils"
 )
 
 // Authenticate via Access and Secret Keys

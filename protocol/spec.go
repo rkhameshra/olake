@@ -7,9 +7,9 @@ import (
 
 	"github.com/goccy/go-json"
 
-	"github.com/gear5sh/gear5/jsonschema"
-	"github.com/gear5sh/gear5/logger"
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/jsonschema"
+	"github.com/datazip-inc/olake/logger"
+	"github.com/datazip-inc/olake/utils"
 
 	"github.com/spf13/cobra"
 )

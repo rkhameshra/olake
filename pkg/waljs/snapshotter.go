@@ -3,7 +3,7 @@ package waljs
 import (
 	"context"
 
-	"github.com/gear5sh/gear5/protocol"
+	"github.com/datazip-inc/olake/protocol"
 
 	"github.com/jackc/pgx/v5"
 	_ "github.com/lib/pq"

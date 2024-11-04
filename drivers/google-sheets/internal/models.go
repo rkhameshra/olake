@@ -3,7 +3,7 @@ package driver
 import (
 	"fmt"
 
-	"github.com/gear5sh/gear5/types"
+	"github.com/datazip-inc/olake/types"
 )
 
 type Config struct {

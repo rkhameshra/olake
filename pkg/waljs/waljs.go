@@ -7,9 +7,9 @@ import (
 	"io"
 	"time"
 
-	"github.com/gear5sh/gear5/logger"
-	"github.com/gear5sh/gear5/pkg/jdbc"
-	"github.com/gear5sh/gear5/protocol"
+	"github.com/datazip-inc/olake/logger"
+	"github.com/datazip-inc/olake/pkg/jdbc"
+	"github.com/datazip-inc/olake/protocol"
 	"github.com/jackc/pglogrepl"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgconn"

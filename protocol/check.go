@@ -3,9 +3,9 @@ package protocol
 import (
 	"fmt"
 
-	"github.com/gear5sh/gear5/logger"
-	"github.com/gear5sh/gear5/types"
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/logger"
+	"github.com/datazip-inc/olake/types"
+	"github.com/datazip-inc/olake/utils"
 	"github.com/spf13/cobra"
 )
 

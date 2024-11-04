@@ -1,7 +1,7 @@
 package generator
 
 import (
-	"github.com/gear5sh/gear5/logger"
+	"github.com/datazip-inc/olake/logger"
 )
 
 // LogLevel is an enum specifying log verbosity

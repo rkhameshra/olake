@@ -7,7 +7,7 @@ import (
 	"github.com/goccy/go-json"
 
 	"github.com/brainicorn/ganno"
-	"github.com/gear5sh/gear5/jsonschema/schema"
+	"github.com/datazip-inc/olake/jsonschema/schema"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -82,7 +82,7 @@ func TestStandardDocStruct(t *testing.T) {
 }
 
 func TestNewlineSynopsisAndDescStruct(t *testing.T) {
-	pkg := "github.com/gear5sh/gear5/jsonschema/generator"
+	pkg := "github.com/datazip-inc/olake/jsonschema/generator"
 	opts := NewOptions()
 	opts.IncludeTests = true
 	opts.LogLevel = VerboseLevel
@@ -96,7 +96,7 @@ func TestNewlineSynopsisAndDescStruct(t *testing.T) {
 }
 
 func TestNewlineSynopsisDocField(t *testing.T) {
-	pkg := "github.com/gear5sh/gear5/jsonschema/generator"
+	pkg := "github.com/datazip-inc/olake/jsonschema/generator"
 	opts := NewOptions()
 	opts.IncludeTests = true
 	opts.LogLevel = VerboseLevel

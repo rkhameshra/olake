@@ -15,11 +15,11 @@ import (
 
 	"github.com/goccy/go-json"
 
-	"github.com/gear5sh/gear5/drivers/base"
-	"github.com/gear5sh/gear5/logger"
-	"github.com/gear5sh/gear5/types"
-	"github.com/gear5sh/gear5/typeutils"
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/drivers/base"
+	"github.com/datazip-inc/olake/logger"
+	"github.com/datazip-inc/olake/types"
+	"github.com/datazip-inc/olake/typeutils"
+	"github.com/datazip-inc/olake/utils"
 )
 
 type Stream struct {

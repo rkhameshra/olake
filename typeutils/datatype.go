@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/gear5sh/gear5/types"
-	"github.com/gear5sh/gear5/utils"
+	"github.com/datazip-inc/olake/types"
+	"github.com/datazip-inc/olake/utils"
 )
 
 // TypeFromValue return DataType from v type

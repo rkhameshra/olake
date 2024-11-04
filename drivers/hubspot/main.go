@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/gear5sh/gear5"
-	driver "github.com/gear5sh/gear5/drivers/hubspot/internal"
+	"github.com/datazip-inc/olake"
+	driver "github.com/datazip-inc/olake/drivers/hubspot/internal"
 )
 
 func main() {

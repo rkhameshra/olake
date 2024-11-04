@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/gear5sh/gear5"
-	"github.com/gear5sh/gear5/drivers/base"
-	driver "github.com/gear5sh/gear5/drivers/postgres/internal"
-	"github.com/gear5sh/gear5/protocol"
+	"github.com/datazip-inc/olake"
+	"github.com/datazip-inc/olake/drivers/base"
+	driver "github.com/datazip-inc/olake/drivers/postgres/internal"
+	"github.com/datazip-inc/olake/protocol"
 	_ "github.com/jackc/pgx/v4/stdlib"
 )
 
