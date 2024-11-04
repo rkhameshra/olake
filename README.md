@@ -1,12 +1,12 @@
-# colake
+# Olake
 
 Connector ecosystem for Olake, the key points Olake Connectors focuses on are these
 - **Integrated Writers to avoid block of reading, and pushing directly into destinations**
 - **Connector Autonomy**
 - **Avoid operations that don't contribute to increasing record throughput**
 
-## Colake Structure
-![diagram](/.github/assets/Colake.jpg)
+## Olake Structure
+![diagram](/.github/assets/Olake.jpg)
 
 ## Components
 ### Drivers
