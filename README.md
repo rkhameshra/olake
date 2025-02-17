@@ -217,8 +217,9 @@ Find more [here](https://olake.io/docs/connectors/mongodb/benchmarks).
 
 Drivers aka Connectors/Source that includes the logic for interacting with database. Upcoming drivers being planned are
 - [x] MongoDB ([Documentation](https://github.com/datazip-inc/olake/tree/master/drivers/mongodb))
+- [ ] MySQL (Coming Soon!)
+- [ ] Postgres (Coming Soon!)
 - [ ] Kafka
-- [ ] Postgres
 - [ ] DynamoDB
 
 
