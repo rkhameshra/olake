@@ -217,9 +217,10 @@ Find more [here](https://olake.io/docs/connectors/mongodb/benchmarks).
 
 Drivers aka Connectors/Source that includes the logic for interacting with database. Upcoming drivers being planned are
 - [x] MongoDB ([Documentation](https://github.com/datazip-inc/olake/tree/master/drivers/mongodb))
-- [ ] Kafka
-- [ ] Postgres
+- [ ] MySQL (Coming Soon!)
+- [ ] Postgres (Coming Soon!)
 - [ ] DynamoDB
+- [ ] Kafka
 
 
 
@@ -229,7 +230,7 @@ Writers are directly integrated into drivers to avoid blockage of writing/readin
 
 Writers are being planned in this order
 - [x] Parquet Writer (Writes Parquet files on Local/S3)
-- [ ] S3 Iceberg Parquet
+- [ ] S3 Iceberg Parquet (Coming Soon!)
 - [ ] Snowflake
 - [ ] BigQuery
 - [ ] RedShift
