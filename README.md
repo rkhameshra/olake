@@ -113,7 +113,7 @@ Follow the steps below to get started with OLake:
         }
     ```
     #### (Optional) Partition Destination Folder based on Columns
-    Partition data based on column value read more about in olake docs. 
+    Partition data based on column value. Read more in documentation about [S3 partitioning](https://olake.io/docs/writers/s3#s3-data-partitioning). 
     ```json
          "partition_regex": "/{col_1, default_value, granularity}",
     ```
