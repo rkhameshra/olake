@@ -113,13 +113,13 @@ Follow the steps below to get started with OLake:
         }
     ```
     #### (Optional) Partition Destination Folder based on Columns
-    Partition data based on column value read more about in olake docs. 
+    Partition data based on column value. Read more in the documentation about [S3 partitioning](https://olake.io/docs/writers/s3#s3-data-partitioning).
     ```json
          "partition_regex": "/{col_1, default_value, granularity}",
     ```
-    `col_1`: Partitioning Column. Supports `now()` as value for current date.<br>
-    `default_value`: if column value is null or not parsable then default will be used.<br>
-    `granularity` (Optional): Support for time based columns. Supported Values: `HH`,`DD`,`WW`,`MM`,`YY`.
+    `col_1`: Partitioning Column. Supports `now()` as a value for the current date.<br>
+    `default_value`: if the column value is null or not parsable then the default will be used.<br>
+    `granularity` (Optional): Support for time-based columns. Supported Values: `HH`,`DD`,`WW`,`MM`,`YY`.
     #### (Optional) Exclude Unwanted Streams
     To exclude streams, edit catalog.json and remove them from selected_streams. <br>
     #### Example (For Exclusion of table2) 
@@ -168,7 +168,7 @@ For more details, refer to the [documentation](https://olake.io/docs).
 
 
 
-## Benchmark Results: Refer this doc for complete information
+## Benchmark Results: Refer to this doc for complete information
 
 ### Speed Comparison: Full Load Performance
 
