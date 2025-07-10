@@ -12,19 +12,107 @@
     <a href="https://join.slack.com/t/getolake/shared_invite/zt-2utw44do6-g4XuKKeqBghBMy2~LcJ4ag"><img alt="slack" src="https://img.shields.io/badge/Join%20Our%20Community-Slack-blue"/></a>
 </p>
 
-## 🚀 Getting Started with OLake UI (Recommended)
+# 🧊 OLake — Super-fast Sync from Databases to Apache Iceberg
+
+> **OLake** is an open-source connector for replicating data from transactional databases like **PostgreSQL, MySQL, MongoDB Oracle & Kafka** to open data lakehouse formats like **Apache Iceberg** — at blazing speeds and minimal infrastructure cost.
+
+---
+
+## 🚀 Why OLake?
+
+- 🧠 **Smart sync**: Full + CDC replication with automatic schema discovery  
+- ⚡ **High throughput**: 46K RPS (Postgres), 36K RPS (CDC)  
+- 💾 **Iceberg-native**: Supports Glue, Hive, JDBC, REST catalogs  
+- 🖥️ **Self-serve UI**: Deploy via Docker Compose and sync in minutes  
+- 💸 **Infra-light**: No Spark, no Flink — just Go and Postgres
+
+---
+
+## 📊 Benchmarks
+
+| Source → Destination | Supported Mode                             | Throughput            | Relative Performance        |Full Report        |
+|----------------------|--------------------------------------------|-----------------------|-----------------------------|-------------------|
+| Postgres → Iceberg   | Full Load, CDC, Incremental(Coming Soon!)  | 46,262 RPS (Full load)| 101× faster than Airbyte    |[Full Report](https://olake.io/docs/connectors/postgres/benchmarks)
+| MySQL → Iceberg      | Full Load, CDC, Incremental(Coming Soon!)  | 64,334 RPS (Full load)| 63× faster than Airbyte     |[Full Report](https://olake.io/docs/connectors/mysql/benchmarks)
+| MongoDB → Iceberg    | Full Load, CDC, Incremental(Coming Soon!)  | Coming Soon!          | 20× faster than Airbyte     |[Full Report](https://olake.io/docs/connectors/mongodb/benchmarks)
+| Oracle → Iceberg     | Full Load, Incremental(Coming Soon!)       | Coming Soon!          |                             |
+
+**These are preliminary results. Fully reproducible benchmark scores will be published soon.*
+
+---
+
+## 🔧 Supported Sources and Destinations
+
+### Sources
+
+| Source        | Full Load    |  CDC          | Incremental       | Notes                       |
+|---------------|--------------|---------------|-------------------|-----------------------------|
+| PostgreSQL    | ✅           | ✅ `wal2json` | WIP                |`pgoutput` support WIP       |
+| MySQL         | ✅           | ✅            | WIP                | Binlog-based CDC            |
+| MongoDB       | ✅           | ✅            | WIP                | Oplog-based CDC             |
+| Oracle        | ✅           | Coming Soon!  | WIP                |                             |
+| Kafka        | Coming Soon! | Coming Soon!  | WIP                |                            |
+
+| Functionality                 | MongoDB | Postgres | MySQL | Oracle | Kafka |
+| :---------------------------- | :-----: | :------: | :---: | :---: | :---: |
+| Full Refresh Sync             |    ✅    |    ✅     |   ✅   |   ✅   |  WIP  |
+| Incremental Sync              |    WIP    |    WIP     |   WIP   |  WIP   |  WIP   |
+| CDC Sync                      |    ✅    |    ✅     |   ✅   |   WIP   |   WIP   |
+| Full Load Parallel Processing |    ✅    |    ✅     |   ✅   |  ✅   |   WIP   |
+| CDC Parallel Processing       |    ✅    |    ❌     |   ❌   |  WIP   |  WIP   |
+| Resumable Full Load           |    ✅    |    ✅     |   ✅   |  ✅   |  ✅   |
+| CDC Heartbeat (Planned)                 |    -    |    -     |   -   |  -   |  -   |
+
+1. [Getting started Postgres -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/postgres) | [Postgres Docs](https://olake.io/docs/connectors/postgres/overview)
+2. [Getting started MongoDB -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/mongodb) | [MongoDB Docs](https://olake.io/docs/connectors/mongodb/overview)
+3. [Getting started MySQL -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/mysql)  | [MySQL Docs](https://olake.io/docs/connectors/mysql/overview)
+4. [Getting started Oracle -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/oracle)  | [MySQL Docs](https://olake.io/docs/connectors/oracle/overview)
+
+### Destinations
+
+| Destination    | Format    | Supported Catalogs                                            |
+|----------------|-----------|---------------------------------------------------------------|
+| Iceberg        | ✅         | Glue, Hive, JDBC, REST (Nessie, Polaris, Unity, Lakekeeper)  |
+| Parquet        | ✅         | Filesystem                                                   |
+| Other formats  | 🔜         | Planned: Delta Lake, Hudi                                    |
+
+
+| Functionality              | Local Filesystem | AWS S3 | Apache Iceberg |
+| :------------------------- | :--------------: | :----: | :------------: |
+| Flattening & Normalization |        ✅         |   ✅    |       ✅        |
+| Partitioning               |        ✅         |   ✅    |       ✅        |
+| Schema Data Type Changes   |        ✅         |   ✅    |      WIP        |
+| Schema Evolution           |        ✅         |   ✅    |       ✅        |
+
+[Apache Iceberg Docs](https://olake.io/docs/writers/iceberg/overview)
+    1. Catalogs
+       1. [AWS Glue Catalog](https://olake.io/docs/writers/iceberg/catalog/glue)
+       2. [REST Catalog](https://olake.io/docs/writers/iceberg/catalog/rest)
+       3. [JDBC Catalog](https://olake.io/docs/writers/iceberg/catalog/jdbc)
+       4. [Hive Catalog](https://olake.io/docs/writers/iceberg/catalog/hive)
+    2. [Azure ADLS Gen2](https://olake.io/docs/writers/iceberg/azure)
+    3. [Google Cloud Storage (GCS)](https://olake.io/docs/writers/iceberg/gcs)
+    4. [MinIO (local)](https://olake.io/docs/writers/iceberg/docker-compose#local-catalog-test-setup)
+    5. Iceberg Table Management
+       1. [S3 Tables Supported](https://olake.io/docs/writers/iceberg/s3-tables)
+
+Parquet Writer
+   1. [AWS S3 Docs](https://olake.io/docs/writers/parquet/s3)
+   2. [Google Cloud Storage (GCS)](https://olake.io/docs/writers/parquet/gcs)
+   3. [Local FileSystem Docs](https://olake.io/docs/writers/parquet/local)
+
+---
+
+## 🧪 Quickstart (UI + Docker)
 
 OLake UI is a web-based interface for managing OLake jobs, sources, destinations, and configurations. You can run the entire OLake stack (UI, Backend, and all dependencies) using Docker Compose. This is the recommended way to get started.
-
-### Quick Start (2 step process):
-
-1. **Start OLake UI via docker compose:**
+Run the UI, connect your source DB, and start syncing in minutes. 
 
 ```sh
 curl -sSL https://raw.githubusercontent.com/datazip-inc/olake-ui/master/docker-compose.yml | docker compose -f - up -d
 ```
 
-2. **Access the UI:**
+**Access the UI:**
 
       * **OLake UI:** [http://localhost:8000](http://localhost:8000)
       * Log in with default credentials: `admin` / `password`.
@@ -45,92 +133,9 @@ With the UI running, you can create a data pipeline in a few steps:
 
 For a detailed walkthrough, refer to the [Jobs documentation](https://olake.io/docs/jobs/create-jobs).
 
-## Performance Benchmarks*
+---
 
-OLake is engineered for high-throughput data replication.
-
-1. **Postgres Connector to Apache Iceberg:** ([See Detailed Benchmark](https://olake.io/docs/connectors/postgres/benchmarks))
-
-      * **Full load:** Syncs at **46,262 RPS** for 4 billion rows. (101x Airbyte, 11.6x Estuary, 3.1x Debezium)
-      * **CDC:** Syncs at **36,982 RPS** for 50 million changes. (63x Airbyte, 12x Estuary, 2.7x Debezium)
-
-2. **MongoDB Connector to Apache Iceberg:** ([See Detailed Benchmark](https://olake.io/docs/connectors/mongodb/benchmarks))
-
-      * Syncs **35,694 records/sec**, replicating a 664 GB dataset (230 million rows) in 46 minutes. (20× Airbyte, 15× Debezium, 6× Fivetran)
-
-**These are preliminary results. Fully reproducible benchmark scores will be published soon.*
-
-## Getting Started with OLake
-
-### Install OLake
-
-Below are different ways you can run OLake:
-
-1. [OLake UI (Recommended)](https://olake.io/docs/getting-started/olake-ui)
-2. [Standalone Docker container](https://olake.io/docs/install/docker)
-3. [Airflow on EC2](https://olake.io/blog/olake-airflow-on-ec2?utm_source=chatgpt.com)
-4. [Airflow on Kubernetes](https://olake.io/blog/olake-airflow)
-
-### Source / Connectors
-
-1. [Getting started Postgres -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/postgres) | [Postgres Docs](https://olake.io/docs/connectors/postgres/overview)
-2. [Getting started MongoDB -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/mongodb) | [MongoDB Docs](https://olake.io/docs/connectors/mongodb/overview)
-3. [Getting started MySQL -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/mysql)  | [MySQL Docs](https://olake.io/docs/connectors/mysql/overview)
-
-### Writers / Destination
-
-1. [Apache Iceberg Docs](https://olake.io/docs/writers/iceberg/overview)
-    1. Catalogs
-       1. [AWS Glue Catalog](https://olake.io/docs/writers/iceberg/catalog/glue)
-       2. [REST Catalog](https://olake.io/docs/writers/iceberg/catalog/rest)
-       3. [JDBC Catalog](https://olake.io/docs/writers/iceberg/catalog/jdbc)
-       4. [Hive Catalog](https://olake.io/docs/writers/iceberg/catalog/hive)
-    2. [Azure ADLS Gen2](https://olake.io/docs/writers/iceberg/azure)
-    3. [Google Cloud Storage (GCS)](https://olake.io/docs/writers/iceberg/gcs)
-    4. [MinIO (local)](https://olake.io/docs/writers/iceberg/docker-compose#local-catalog-test-setup)
-    5. Iceberg Table Management
-       1. [S3 Tables Supported](https://olake.io/docs/writers/iceberg/s3-tables)
-
-2. Parquet Writer
-   1. [AWS S3 Docs](https://olake.io/docs/writers/parquet/s3)
-   2. [Google Cloud Storage (GCS)](https://olake.io/docs/writers/parquet/gcs)
-   3. [Local FileSystem Docs](https://olake.io/docs/writers/parquet/local)
-
-
-
-### Source Connectors
-
-| Functionality                 | MongoDB | Postgres | MySQL |
-| :---------------------------- | :-----: | :------: | :---: |
-| Full Refresh Sync             |    ✅    |    ✅     |   ✅   |
-| Incremental Sync              |    WIP    |    WIP     |   WIP   |
-| CDC Sync                      |    ✅    |    ✅     |   ✅   |
-| Full Load Parallel Processing |    ✅    |    ✅     |   ✅   |
-| CDC Parallel Processing       |    ✅    |    ❌     |   ❌   |
-| Resumable Full Load           |    ✅    |    ✅     |   ✅   |
-| CDC Heartbeat (Planned)                 |    -    |    -     |   -   |
-
-### Destination Writers
-
-| Functionality              | Local Filesystem | AWS S3 | Apache Iceberg |
-| :------------------------- | :--------------: | :----: | :------------: |
-| Flattening & Normalization |        ✅         |   ✅    |       ✅        |
-| Partitioning               |        ✅         |   ✅    |       ✅        |
-| Schema Data Type Changes   |        ✅         |   ✅    |      WIP        |
-| Schema Evolution           |        ✅         |   ✅    |       ✅        |
-
-### Supported Catalogs For Iceberg Writer
-
-| Catalog               | Status                                                                                                   |
-| :-------------------- | :------------------------------------------------------------------------------------------------------- |
-| **Glue Catalog**      | Supported                                                                                                |
-| **Hive Metastore**    | Supported                                                                                                |
-| **JDBC Catalog**      | Supported                                                                                                |
-| **REST Catalog**      | Supported (with AWS S3 table)                                                                                               |
-| **Azure Purview**     | Not Planned, [submit a request](https://github.com/datazip-inc/olake/issues/new?template=new-feature.md) |
-| **BigLake Metastore** | Not Planned, [submit a request](https://github.com/datazip-inc/olake/issues/new?template=new-feature.md) |
-
-## ⚙️ Core Framework & CLI
+## 🛠️ CLI Usage (Advanced)
 
 For advanced users and automation, OLake's core logic is exposed via a powerful CLI. The core framework handles state management, configuration validation, logging, and type detection. It interacts with drivers using four main commands:
 
@@ -141,6 +146,19 @@ For advanced users and automation, OLake's core logic is exposed via a powerful 
 
 **Find out more about how OLake works [here](https://olake.io/docs).**
 
+---
+
+### Install OLake
+
+Below are other different ways you can run OLake:
+
+1. [OLake UI (Recommended)](https://olake.io/docs/getting-started/olake-ui)
+2. [Standalone Docker container](https://olake.io/docs/install/docker)
+3. [Airflow on EC2](https://olake.io/blog/olake-airflow-on-ec2?utm_source=chatgpt.com)
+4. [Airflow on Kubernetes](https://olake.io/blog/olake-airflow)
+
+---
+
 ## Playground
 
 1. [OLake + Apache Iceberg + REST Catalog + Presto](https://olake.io/docs/playground/olake-iceberg-presto)
@@ -148,15 +166,46 @@ For advanced users and automation, OLake's core logic is exposed via a powerful 
 3. [OLake + Apache Iceberg + AWS Glue + Athena](https://olake.io/iceberg/olake-iceberg-athena)
 4. [OLake + Apache Iceberg + AWS Glue + Snowflake](https://olake.io/iceberg/olake-glue-snowflake)
 
+---
 
-## 🗺️ Roadmap
+## 📦 Architecture
 
-Check out our [GitHub Project Roadmap](https://github.com/orgs/datazip-inc/projects/5) and the [Upcoming OLake Roadmap](https://olake.io/docs/roadmap) to track what's next. If you have ideas or feedback, please share them in our [GitHub Discussions](https://github.com/datazip-inc/olake/discussions) or by opening an issue.
+![OLake Architecture](https://olake.io/blog/olake-architecture-deep-dive)
 
-## ❤️ Contributing
+- Stateless Go-based CLI & Temporal workers
+- Iceberg writers integrated directly with Iceberg format spec
+- Connectors modularized for easy plugin-based extension
 
-We ❤️ contributions, big or small! Check out our [Bounty Program](https://olake.io/docs/community/issues-and-prs#goodies). A huge thanks to all our amazing [contributors!](https://github.com/datazip-inc/olake/graphs/contributors)
+---
+
+## 🌍 Use Cases
+
+- ✅ Migrate from OLTP to Iceberg without Spark or Flink
+- ✅ Enable BI over fresh CDC data using Athena, StarRocks, Trino, Presto, Dremio, Databricks, Snowflake and more!
+- ✅ Build real-time data lakes on cloud object stores
+
+---
+
+## 🧭 Roadmap Highlights
+
+- [x] Oracle Full Load Support
+- [ ] Oracle Incremental CDC (WIP)
+- [ ] Filters for Full Load and Incremental (WIP)
+- [ ] Real-time Streaming Mode (Kafka)
+- [ ] Iceberg V3 Support
+
+📌 Check out our [GitHub Project Roadmap](https://github.com/orgs/datazip-inc/projects/5) and the [Upcoming OLake Roadmap](https://olake.io/docs/roadmap) to track what's next. If you have ideas or feedback, please share them in our [GitHub Discussions](https://github.com/datazip-inc/olake/discussions) or by opening an issue.
+
+---
+
+## 🤝 Contributing
+
+We ❤️ contributions, big or small!
+
+Check out our [Bounty Program](https://olake.io/docs/community/issues-and-prs#goodies). A huge thanks to all our amazing [contributors!](https://github.com/datazip-inc/olake/graphs/contributors)
 
 * To contribute to the **OLake core**, see [CONTRIBUTING.md](https://www.google.com/search?q=CONTRIBUTING.md).
 * To contribute to the **UI**, visit the [OLake UI Repository](https://github.com/datazip-inc/olake-ui).
 * To contribute to our **website and documentation**, visit the [Olake Docs Repository](https://github.com/datazip-inc/olake-docs/).
+
+---
