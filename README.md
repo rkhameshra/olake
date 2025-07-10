@@ -35,8 +35,8 @@
 |----------------------|-----------------------|-----------------------------|-------------------|
 | Postgres → Iceberg   | 46,262 RPS (Full load)| 101× faster than Airbyte    |[Full Report](https://olake.io/docs/connectors/postgres/benchmarks)
 | MySQL → Iceberg      | 64,334 RPS (Full load)| 9× faster than Airbyte     |[Full Report](https://olake.io/docs/connectors/mysql/benchmarks)
-| MongoDB → Iceberg    | Coming Soon!          |                            |[Full Report](https://olake.io/docs/connectors/mongodb/benchmarks)
-| Oracle → Iceberg     | Coming Soon!          |                             |
+| MongoDB → Iceberg    | WIP          |                            |[Full Report](https://olake.io/docs/connectors/mongodb/benchmarks)
+| Oracle → Iceberg     | WIP          |                             |
 
 **These are preliminary results. Fully reproducible benchmark scores will be published soon.*
 
@@ -53,8 +53,8 @@
 | PostgreSQL    | ✅           | ✅ `wal2json` | WIP                |`pgoutput` support WIP       |
 | MySQL         | ✅           | ✅            | WIP                | Binlog-based CDC            |
 | MongoDB       | ✅           | ✅            | WIP                | Oplog-based CDC             |
-| Oracle        | ✅           | Coming Soon!  | WIP                |                             |
-| Kafka        | Coming Soon! | Coming Soon!  | WIP                |                            |
+| Oracle        | ✅           | WIP  | WIP                |                             |
+| Kafka        | WIP | WIP  | WIP                |                            |
 
 | Functionality                 | MongoDB | Postgres | MySQL | Oracle | Kafka |
 | :---------------------------- | :-----: | :------: | :---: | :---: | :---: |
