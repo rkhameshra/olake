@@ -24,7 +24,7 @@
 - ⚡ **High throughput**: 46K RPS (Postgres), 36K RPS (CDC)  
 - 💾 **Iceberg-native**: Supports Glue, Hive, JDBC, REST catalogs  
 - 🖥️ **Self-serve UI**: Deploy via Docker Compose and sync in minutes  
-- 💸 **Infra-light**: No Spark, no Flink — just Go and Postgres
+- 💸 **Infra-light**: No Spark, no Flink, no Kafka, no Debezium
 
 ---
 
