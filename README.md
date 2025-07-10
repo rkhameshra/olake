@@ -30,6 +30,7 @@
 
 ## 📊 Benchmarks
 
+
 | Source → Destination | Supported Mode                             | Throughput            | Relative Performance        |Full Report        |
 |----------------------|--------------------------------------------|-----------------------|-----------------------------|-------------------|
 | Postgres → Iceberg   | Full Load, CDC, Incremental(Coming Soon!)  | 46,262 RPS (Full load)| 101× faster than Airbyte    |[Full Report](https://olake.io/docs/connectors/postgres/benchmarks)
@@ -43,7 +44,9 @@
 
 ## 🔧 Supported Sources and Destinations
 
+
 ### Sources
+
 
 | Source        | Full Load    |  CDC          | Incremental       | Notes                       |
 |---------------|--------------|---------------|-------------------|-----------------------------|
@@ -70,6 +73,7 @@
 
 ### Destinations
 
+
 | Destination    | Format    | Supported Catalogs                                            |
 |----------------|-----------|---------------------------------------------------------------|
 | Iceberg        | ✅         | Glue, Hive, JDBC, REST (Nessie, Polaris, Unity, Lakekeeper)  |
@@ -86,15 +90,16 @@
 
 [Apache Iceberg Docs](https://olake.io/docs/writers/iceberg/overview)
     1. Catalogs
-       1. [AWS Glue Catalog](https://olake.io/docs/writers/iceberg/catalog/glue)
-       2. [REST Catalog](https://olake.io/docs/writers/iceberg/catalog/rest)
-       3. [JDBC Catalog](https://olake.io/docs/writers/iceberg/catalog/jdbc)
-       4. [Hive Catalog](https://olake.io/docs/writers/iceberg/catalog/hive)
+       a. [AWS Glue Catalog](https://olake.io/docs/writers/iceberg/catalog/glue)
+       b. [REST Catalog](https://olake.io/docs/writers/iceberg/catalog/rest)
+       c. [JDBC Catalog](https://olake.io/docs/writers/iceberg/catalog/jdbc) 
+       d. [JDBC Catalog](https://olake.io/docs/writers/iceberg/catalog/jdbc)
+       e. [Hive Catalog](https://olake.io/docs/writers/iceberg/catalog/hive)
     2. [Azure ADLS Gen2](https://olake.io/docs/writers/iceberg/azure)
     3. [Google Cloud Storage (GCS)](https://olake.io/docs/writers/iceberg/gcs)
     4. [MinIO (local)](https://olake.io/docs/writers/iceberg/docker-compose#local-catalog-test-setup)
     5. Iceberg Table Management
-       1. [S3 Tables Supported](https://olake.io/docs/writers/iceberg/s3-tables)
+        [S3 Tables Supported](https://olake.io/docs/writers/iceberg/s3-tables)
 
 Parquet Writer
    1. [AWS S3 Docs](https://olake.io/docs/writers/parquet/s3)
