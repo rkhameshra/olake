@@ -56,15 +56,6 @@
 | Oracle        | ✅           | WIP  | WIP                |                             |
 | Kafka        | WIP | WIP  | WIP                |                            |
 
-| Functionality                 | MongoDB | Postgres | MySQL | Oracle | Kafka |
-| :---------------------------- | :-----: | :------: | :---: | :---: | :---: |
-| Full Refresh Sync             |    ✅    |    ✅     |   ✅   |   ✅   |  WIP  |
-| Incremental Sync              |    WIP    |    WIP     |   WIP   |  WIP   |  WIP   |
-| CDC Sync                      |    ✅    |    ✅     |   ✅   |   WIP   |   WIP   |
-| Full Load Parallel Processing |    ✅    |    ✅     |   ✅   |  ✅   |   WIP   |
-| CDC Parallel Processing       |    ✅    |    ❌     |   ❌   |  WIP   |  WIP   |
-| Resumable Full Load           |    ✅    |    ✅     |   ✅   |  ✅   |  ✅   |
-| CDC Heartbeat (Planned)                 |    -    |    -     |   -   |  -   |  -   |
 
 1. [Getting started Postgres -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/postgres) | [Postgres Docs](https://olake.io/docs/connectors/postgres/overview)
 2. [Getting started MongoDB -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/mongodb) | [MongoDB Docs](https://olake.io/docs/connectors/mongodb/overview)
@@ -81,12 +72,6 @@
 | Other formats  | 🔜         | Planned: Delta Lake, Hudi                                    |
 
 
-| Functionality              | Local Filesystem | AWS S3 | Apache Iceberg |
-| :------------------------- | :--------------: | :----: | :------------: |
-| Flattening & Normalization |        ✅         |   ✅    |       ✅        |
-| Partitioning               |        ✅         |   ✅    |       ✅        |
-| Schema Data Type Changes   |        ✅         |   ✅    |      WIP        |
-| Schema Evolution           |        ✅         |   ✅    |       ✅        |
 
 ##### Writer Docs
 
