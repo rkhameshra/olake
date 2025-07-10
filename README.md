@@ -88,18 +88,13 @@
 | Schema Data Type Changes   |        ✅         |   ✅    |      WIP        |
 | Schema Evolution           |        ✅         |   ✅    |       ✅        |
 
-[Apache Iceberg Docs](https://olake.io/docs/writers/iceberg/overview)
+### [Apache Iceberg Docs](https://olake.io/docs/writers/iceberg/overview)
     1. Catalogs
-    
-       a. [AWS Glue Catalog](https://olake.io/docs/writers/iceberg/catalog/glue)
-       
-       b. [REST Catalog](https://olake.io/docs/writers/iceberg/catalog/rest)
-       
-       c. [JDBC Catalog](https://olake.io/docs/writers/iceberg/catalog/jdbc) 
-       
-       d. [JDBC Catalog](https://olake.io/docs/writers/iceberg/catalog/jdbc)
-       
-       e. [Hive Catalog](https://olake.io/docs/writers/iceberg/catalog/hive)
+        a. [AWS Glue Catalog](https://olake.io/docs/writers/iceberg/catalog/glue)
+        b. [REST Catalog](https://olake.io/docs/writers/iceberg/catalog/rest)
+        c. [JDBC Catalog](https://olake.io/docs/writers/iceberg/catalog/jdbc) 
+        d. [JDBC Catalog](https://olake.io/docs/writers/iceberg/catalog/jdbc)
+        e. [Hive Catalog](https://olake.io/docs/writers/iceberg/catalog/hive)
        
     2. [Azure ADLS Gen2](https://olake.io/docs/writers/iceberg/azure)
     
