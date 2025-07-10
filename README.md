@@ -12,13 +12,13 @@
     <a href="https://join.slack.com/t/getolake/shared_invite/zt-2utw44do6-g4XuKKeqBghBMy2~LcJ4ag"><img alt="slack" src="https://img.shields.io/badge/Join%20Our%20Community-Slack-blue"/></a>
 </p>
 
-# 🧊 OLake — Super-fast Sync from Databases to Apache Iceberg
+## 🧊 OLake — Super-fast Sync from Databases to Apache Iceberg
 
 > **OLake** is an open-source connector for replicating data from transactional databases like **PostgreSQL, MySQL, MongoDB Oracle & Kafka** to open data lakehouse formats like **Apache Iceberg** — at blazing speeds and minimal infrastructure cost.
 
 ---
 
-## 🚀 Why OLake?
+### 🚀 Why OLake?
 
 - 🧠 **Smart sync**: Full + CDC replication with automatic schema discovery  
 - ⚡ **High throughput**: 46K RPS (Postgres), 36K RPS (CDC)  
@@ -28,7 +28,7 @@
 
 ---
 
-## 📊 Benchmarks
+### 📊 Benchmarks
 
 
 | Source → Destination | Supported Mode                             | Throughput            | Relative Performance        |Full Report        |
@@ -42,10 +42,10 @@
 
 ---
 
-## 🔧 Supported Sources and Destinations
+### 🔧 Supported Sources and Destinations
 
 
-### Sources
+#### Sources
 
 
 | Source        | Full Load    |  CDC          | Incremental       | Notes                       |
@@ -71,7 +71,7 @@
 3. [Getting started MySQL -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/mysql)  | [MySQL Docs](https://olake.io/docs/connectors/mysql/overview)
 4. [Getting started Oracle -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/oracle)  | [MySQL Docs](https://olake.io/docs/connectors/oracle/overview)
 
-### Destinations
+#### Destinations
 
 
 | Destination    | Format    | Supported Catalogs                                            |
@@ -88,7 +88,7 @@
 | Schema Data Type Changes   |        ✅         |   ✅    |      WIP        |
 | Schema Evolution           |        ✅         |   ✅    |       ✅        |
 
-#### Writer Docs
+##### Writer Docs
 
 1. [Apache Iceberg Docs](https://olake.io/docs/writers/iceberg/overview)
     1. Catalogs
@@ -109,7 +109,7 @@
 
 ---
 
-## 🧪 Quickstart (UI + Docker)
+### 🧪 Quickstart (UI + Docker)
 
 OLake UI is a web-based interface for managing OLake jobs, sources, destinations, and configurations. You can run the entire OLake stack (UI, Backend, and all dependencies) using Docker Compose. This is the recommended way to get started.
 Run the UI, connect your source DB, and start syncing in minutes. 
@@ -119,7 +119,6 @@ curl -sSL https://raw.githubusercontent.com/datazip-inc/olake-ui/master/docker-c
 ```
 
 **Access the UI:**
-
       * **OLake UI:** [http://localhost:8000](http://localhost:8000)
       * Log in with default credentials: `admin` / `password`.
 
@@ -127,7 +126,7 @@ Detailed getting started using OLake UI can be found [here](https://olake.io/doc
 
 ![olake-ui](https://github.com/user-attachments/assets/6081e9ad-7aef-465f-bde1-5b41b19ec6cd)
 
-### Creating Your First Job
+#### Creating Your First Job
 
 With the UI running, you can create a data pipeline in a few steps:
 
@@ -141,7 +140,7 @@ For a detailed walkthrough, refer to the [Jobs documentation](https://olake.io/d
 
 ---
 
-## 🛠️ CLI Usage (Advanced)
+### 🛠️ CLI Usage (Advanced)
 
 For advanced users and automation, OLake's core logic is exposed via a powerful CLI. The core framework handles state management, configuration validation, logging, and type detection. It interacts with drivers using four main commands:
 
@@ -154,7 +153,7 @@ For advanced users and automation, OLake's core logic is exposed via a powerful 
 
 ---
 
-### Install OLake
+#### Install OLake
 
 Below are other different ways you can run OLake:
 
@@ -165,7 +164,7 @@ Below are other different ways you can run OLake:
 
 ---
 
-## Playground
+### Playground
 
 1. [OLake + Apache Iceberg + REST Catalog + Presto](https://olake.io/docs/playground/olake-iceberg-presto)
 2. [OLake + Apache Iceberg + AWS Glue + Trino](https://olake.io/iceberg/olake-iceberg-trino)
@@ -174,7 +173,7 @@ Below are other different ways you can run OLake:
 
 ---
 
-## 📦 Architecture
+### 📦 Architecture
 
 ![OLake Architecture](https://olake.io/blog/olake-architecture-deep-dive)
 
@@ -184,7 +183,7 @@ Below are other different ways you can run OLake:
 
 ---
 
-## 🌍 Use Cases
+### 🌍 Use Cases
 
 - ✅ Migrate from OLTP to Iceberg without Spark or Flink
 - ✅ Enable BI over fresh CDC data using Athena, StarRocks, Trino, Presto, Dremio, Databricks, Snowflake and more!
@@ -192,7 +191,7 @@ Below are other different ways you can run OLake:
 
 ---
 
-## 🧭 Roadmap Highlights
+### 🧭 Roadmap Highlights
 
 - [x] Oracle Full Load Support
 - [ ] Oracle Incremental CDC (WIP)
@@ -204,7 +203,7 @@ Below are other different ways you can run OLake:
 
 ---
 
-## 🤝 Contributing
+### 🤝 Contributing
 
 We ❤️ contributions, big or small!
 
@@ -214,4 +213,3 @@ Check out our [Bounty Program](https://olake.io/docs/community/issues-and-prs#go
 * To contribute to the **UI**, visit the [OLake UI Repository](https://github.com/datazip-inc/olake-ui).
 * To contribute to our **website and documentation**, visit the [Olake Docs Repository](https://github.com/datazip-inc/olake-docs/).
 
----
