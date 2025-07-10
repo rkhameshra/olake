@@ -69,7 +69,7 @@
 1. [Getting started Postgres -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/postgres) | [Postgres Docs](https://olake.io/docs/connectors/postgres/overview)
 2. [Getting started MongoDB -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/mongodb) | [MongoDB Docs](https://olake.io/docs/connectors/mongodb/overview)
 3. [Getting started MySQL -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/mysql)  | [MySQL Docs](https://olake.io/docs/connectors/mysql/overview)
-4. [Getting started Oracle -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/oracle)  | [MySQL Docs](https://olake.io/docs/connectors/oracle/overview)
+4. [Getting started Oracle -> Writers](https://github.com/datazip-inc/olake/tree/master/drivers/oracle)  | [Oracle Docs](https://olake.io/docs/connectors/oracle/overview)
 
 #### Destinations
 
