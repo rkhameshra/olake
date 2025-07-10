@@ -89,17 +89,29 @@
 | Schema Evolution           |        ✅         |   ✅    |       ✅        |
 
 [Apache Iceberg Docs](https://olake.io/docs/writers/iceberg/overview)
+
     1. Catalogs
+    
        a. [AWS Glue Catalog](https://olake.io/docs/writers/iceberg/catalog/glue)
+       
        b. [REST Catalog](https://olake.io/docs/writers/iceberg/catalog/rest)
+       
        c. [JDBC Catalog](https://olake.io/docs/writers/iceberg/catalog/jdbc) 
+       
        d. [JDBC Catalog](https://olake.io/docs/writers/iceberg/catalog/jdbc)
+       
        e. [Hive Catalog](https://olake.io/docs/writers/iceberg/catalog/hive)
+       
     2. [Azure ADLS Gen2](https://olake.io/docs/writers/iceberg/azure)
+    
     3. [Google Cloud Storage (GCS)](https://olake.io/docs/writers/iceberg/gcs)
+    
     4. [MinIO (local)](https://olake.io/docs/writers/iceberg/docker-compose#local-catalog-test-setup)
+    
     5. Iceberg Table Management
+    
         [S3 Tables Supported](https://olake.io/docs/writers/iceberg/s3-tables)
+        
 
 Parquet Writer
    1. [AWS S3 Docs](https://olake.io/docs/writers/parquet/s3)
