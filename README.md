@@ -12,9 +12,9 @@
     <a href="https://join.slack.com/t/getolake/shared_invite/zt-2utw44do6-g4XuKKeqBghBMy2~LcJ4ag"><img alt="slack" src="https://img.shields.io/badge/Join%20Our%20Community-Slack-blue"/></a>
 </p>
 
-## 🧊 OLake — Super-fast Sync from Databases to Apache Iceberg
+## 🧊 TL;DR: OLake — Super-fast Sync to Apache Iceberg
 
-> **OLake** is an open-source connector for replicating data from transactional databases like **PostgreSQL, MySQL, MongoDB Oracle & Kafka** to open data lakehouse formats like **Apache Iceberg** — at blazing speeds and minimal infrastructure cost.
+> **OLake** is an open-source connector for replicating data from transactional databases like **PostgreSQL, MySQL, MongoDB, Oracle & Kafka** to open data lakehouse formats like **Apache Iceberg** — at blazing speeds and minimal infrastructure cost.
 
 ---
 
