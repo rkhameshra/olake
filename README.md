@@ -89,7 +89,6 @@
 | Schema Evolution           |        ✅         |   ✅    |       ✅        |
 
 [Apache Iceberg Docs](https://olake.io/docs/writers/iceberg/overview)
-
     1. Catalogs
     
        a. [AWS Glue Catalog](https://olake.io/docs/writers/iceberg/catalog/glue)
