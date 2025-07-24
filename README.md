@@ -155,6 +155,7 @@ Below are other different ways you can run OLake:
 2. [Standalone Docker container](https://olake.io/docs/install/docker)
 3. [Airflow on EC2](https://olake.io/blog/olake-airflow-on-ec2?utm_source=chatgpt.com)
 4. [Airflow on Kubernetes](https://olake.io/blog/olake-airflow)
+5. Kubernetes using Helm (Coming soon!)
 
 ---
 
