@@ -16,6 +16,14 @@
 
 > **OLake** is an open-source connector for replicating data from transactional databases like **PostgreSQL, MySQL, MongoDB, Oracle & Kafka** to open data lakehouse formats like **Apache Iceberg** — at blazing speeds and minimal infrastructure cost.
 
+<h1 align="center" style="border-bottom: none">
+    <a href="https://datazip.io/olake" target="_blank">
+        <img width="3840" height="1920" alt="image" src="https://github.com/user-attachments/assets/e59edc8c-38b6-4d59-ac79-63bf4e0b3a1e" />
+    </a>
+    <br>OLake
+</h1>
+
+
 ---
 
 ### 🚀 Why OLake?
@@ -28,15 +36,20 @@
 
 ---
 
-### 📊 Benchmarks
+### 📊 Benchmarks & possible connections
 
 
 | Source → Destination | Throughput            | Relative Performance        |Full Report        |
 |----------------------|-----------------------|-----------------------------|-------------------|
 | Postgres → Iceberg   | 46,262 RPS (Full load)| 101× faster than Airbyte    |[Full Report](https://olake.io/docs/connectors/postgres/benchmarks) |
 | MySQL → Iceberg      | 64,334 RPS (Full load)| 9× faster than Airbyte     |[Full Report](https://olake.io/docs/connectors/mysql/benchmarks) |
-| MongoDB → Iceberg    | WIP          |                                     |[Full Report](https://olake.io/docs/connectors/mongodb/benchmarks) |
+| MongoDB → Iceberg    | WIP          |                                     | |
 | Oracle → Iceberg     | WIP          |                             | |
+| Postgres → Object Store (Parquet)    | WIP          |                                     | |
+| MySQL → Object Store (Parquet)     | WIP          |                             | |
+| MongoDB → Object Store (Parquet)    | WIP          |                                     | |
+| Oracle → Object Store (Parquet)     | WIP          |                             | |
+
 
 **These are preliminary results. Fully reproducible benchmark scores will be published soon.*
 
