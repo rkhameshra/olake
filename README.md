@@ -20,7 +20,6 @@
     <a href="https://datazip.io/olake" target="_blank">
         <img width="3840" height="1920" alt="image" src="https://github.com/user-attachments/assets/e59edc8c-38b6-4d59-ac79-63bf4e0b3a1e" />
     </a>
-    <br>OLake
 </h1>
 
 
