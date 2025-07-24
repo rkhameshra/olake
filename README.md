@@ -63,9 +63,9 @@
 | Source        | Full Load    |  CDC          | Incremental       | Notes                       | Documentation               |
 |---------------|--------------|---------------|-------------------|-----------------------------|-----------------------------|
 | PostgreSQL    | ✅           | ✅ `wal2json` | WIP                |`pgoutput` support WIP       |[Postgres Docs](https://olake.io/docs/connectors/postgres/overview) |
-| MySQL         | ✅           | ✅            | WIP                | Binlog-based CDC            | [MySQL Docs](https://olake.io/docs/connectors/mysql/overview) |
-| MongoDB       | ✅           | ✅            | WIP                | Oplog-based CDC             |[MongoDB Docs](https://olake.io/docs/connectors/mongodb/overview) |
-| Oracle        | ✅           | WIP  | WIP                |  JDBC based Full Load                |  [Oracle Docs](https://olake.io/docs/connectors/oracle/overview) |
+| MySQL         | ✅           | ✅            | ✅                | Binlog-based CDC            | [MySQL Docs](https://olake.io/docs/connectors/mysql/overview) |
+| MongoDB       | ✅           | ✅            | ✅                | Oplog-based CDC             |[MongoDB Docs](https://olake.io/docs/connectors/mongodb/overview) |
+| Oracle        | ✅           | WIP  | ✅                |  JDBC based Full Load & Incremental                |  [Oracle Docs](https://olake.io/docs/connectors/oracle/overview) |
 | Kafka        | WIP | WIP  | WIP                |                            | |
 
 
